@@ -1,0 +1,17 @@
+io_utils:
+  type: static
+  src:
+    - io_utils/*.cc
+
+gitbin:
+  type: static
+  src:
+    - gitbin/*.cc
+
+gitools:
+  type: binary
+  src:
+    - ./*.cc
+  lib:
+    - io_utils
+    - gitbin
