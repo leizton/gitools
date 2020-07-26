@@ -2,7 +2,30 @@
 
 #include <string>
 
+#include <sys/mman.h>
+
 namespace io_utils {
+
+std::string getDirPath(const std::string& path, int upper = 1);
+
+/**
+ * @param
+ *   _p  create intermediate directories as required
+ * @return
+ *    0  succ;
+ *    1  already exist;
+ *   -1  fail;
+ */
+int mkdir(const std::string& path, bool _p = false);
+
+inline int mkdirp(const std::string& path) {
+  return mkdir(path, true);
+}
+
+int getFileSize(const std::string& file);
+
+int openr(const std::string& file);
+int openw(const std::string& file);
 
 struct File {
 public:

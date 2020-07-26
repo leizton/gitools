@@ -4,7 +4,8 @@
 
 namespace gitbins {
 
-const std::string GitbinsFilePrefix = "_gitbins_";
+const std::string GitbinsFilePrefix = "gitbins_";
+const std::string GitbinsFileSuffix = "_";
 
 void convert(const std::string& file);
 
